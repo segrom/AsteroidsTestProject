@@ -42,7 +42,8 @@ namespace MonoBehaviours
 
         public void DeleteRepresentation(IRepresentable representable)
         {
-            var rep = _representations.First(r => r.Representable == representable);
+            var rep = _representations.FirstOrDefault(r => r.Representable == representable);
+            if(rep is null) return;
             _representations.Remove(rep);
             DestroyImmediate(rep.gameObject);
         }
