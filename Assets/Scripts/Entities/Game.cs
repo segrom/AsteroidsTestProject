@@ -37,7 +37,7 @@ namespace Entities
 
             var asteroidTask = AsteroidSpawnLoop(token);
             var ufoTask = UfoSpawnLoop(token);
-            var updateTask =UpdateLoop(token);
+            var updateTask = UpdateLoop(token);
         }
     
         private void GameOver(IUpdatable obj)

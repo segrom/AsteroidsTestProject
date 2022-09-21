@@ -10,7 +10,7 @@ namespace Entities
         public Asteroid(ObjectsController objectsController, float speed)
         {
             _objectsController = objectsController;
-            Position = (Random.value * 2f * Mathf.PI).RotationToVector() * 10f;
+            Position = (Random.value * 360f).RotationToVector() * 10f;
             Rotation = Position.GetAngleToPoint(new Vector2(0,0));
             Velocity = Rotation.RotationToVector() * speed;
         }
